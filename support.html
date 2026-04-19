@@ -6,6 +6,29 @@
   <title>Support — Easy Upsell</title>
   <meta name="description" content="Get help with Easy Upsell — installation, setup, troubleshooting, and billing support for Shopify merchants." />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .toc { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 40px; }
+    .toc h3 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); margin-bottom: 12px; }
+    .toc ol { margin: 0 0 0 18px; }
+    .toc li { font-size: 0.9rem; margin-bottom: 6px; }
+    .toc a { color: var(--color-accent); }
+    .step { display: flex; gap: 14px; margin-bottom: 16px; }
+    .step-num { flex-shrink: 0; width: 28px; height: 28px; background: var(--color-accent); color: #fff; border-radius: 50%; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+    .step-body { flex: 1; }
+    .step-body strong { display: block; margin-bottom: 4px; font-size: 0.95rem; }
+    .step-body p, .step-body ul { font-size: 0.9rem; color: #374151; margin: 0; }
+    .step-body ul { margin-top: 6px; padding-left: 18px; }
+    .step-body li { margin-bottom: 4px; }
+    .alert { background: #fffbeb; border: 1.5px solid #fde68a; border-radius: var(--radius); padding: 14px 18px; font-size: 0.9rem; color: #92400e; margin: 16px 0; }
+    .alert strong { display: block; margin-bottom: 4px; }
+    .issue { border: 1px solid var(--color-border); border-radius: var(--radius); margin-bottom: 16px; overflow: hidden; }
+    .issue-header { background: var(--color-surface); padding: 14px 18px; font-weight: 700; font-size: 0.95rem; border-bottom: 1px solid var(--color-border); }
+    .issue-body { padding: 16px 18px; }
+    .issue-body p, .issue-body li { font-size: 0.9rem; color: #374151; }
+    .issue-body ul { margin: 8px 0 0 18px; }
+    .issue-body li { margin-bottom: 5px; }
+    code { background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 4px; padding: 1px 6px; font-size: 0.85rem; font-family: "SFMono-Regular", Consolas, monospace; color: #1e293b; }
+  </style>
 </head>
 <body>
 
@@ -23,71 +46,292 @@
   <main>
     <header class="page-header">
       <div class="container">
-        <h1>Support</h1>
-        <p class="meta">We're here to help you get the most out of Easy Upsell.</p>
+        <h1>Support Center</h1>
+        <p class="meta">Everything you need to install, configure, and troubleshoot Easy Upsell.</p>
       </div>
     </header>
 
     <div class="legal-body">
       <div class="container">
 
-        <h2>How can we help?</h2>
-        <p>Our support team assists Shopify merchants with everything related to Easy Upsell — from first-time setup to advanced troubleshooting. Browse the topics below or reach out directly.</p>
+        <nav class="toc" aria-label="Page contents">
+          <h3>On this page</h3>
+          <ol>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#setup">Setup &amp; Configuration</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#troubleshooting">Troubleshooting</a></li>
+            <li><a href="#billing">Billing</a></li>
+            <li><a href="#contact">Contact Support</a></li>
+          </ol>
+        </nav>
 
-        <div class="support-grid">
-          <div class="support-card">
-            <span class="icon" aria-hidden="true">🚀</span>
-            <h3>Installation</h3>
-            <p>Help getting Easy Upsell installed and connected to your Shopify store for the first time.</p>
+        <!-- INSTALLATION -->
+        <h2 id="installation">Installation</h2>
+        <p>Easy Upsell has two parts: the <strong>admin app</strong> (where you manage offers) and the <strong>theme extension</strong> (what your customers see). Both need to be set up.</p>
+
+        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Step 1 — Install the app</h3>
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>Install from the Shopify App Store</strong>
+            <p>Find Easy Upsell in the Shopify App Store and click <strong>Add app</strong>. You'll be redirected to Shopify's OAuth flow to grant the required permissions.</p>
           </div>
-          <div class="support-card">
-            <span class="icon" aria-hidden="true">⚙️</span>
-            <h3>Setup &amp; Configuration</h3>
-            <p>Guidance on creating upsell offers, setting discount rules, and customizing offer display.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>Approve permissions</strong>
+            <p>Easy Upsell requires access to your products and the ability to create automatic discounts at checkout. Review and click <strong>Install app</strong>.</p>
           </div>
-          <div class="support-card">
-            <span class="icon" aria-hidden="true">🔍</span>
-            <h3>Troubleshooting</h3>
-            <p>Offers not showing? Discounts not applying? We'll help diagnose and resolve the issue.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>You're in the dashboard</strong>
+            <p>After install, you'll land on the Easy Upsell dashboard inside Shopify Admin. You're ready to create your first offer.</p>
           </div>
-          <div class="support-card">
-            <span class="icon" aria-hidden="true">💳</span>
-            <h3>Billing</h3>
-            <p>Questions about charges, plan changes, or billing through Shopify's platform.</p>
+        </div>
+
+        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Step 2 — Enable the theme extension</h3>
+        <p>The upsell modal is delivered via a Shopify theme extension. You need to enable it once in your theme.</p>
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>Go to Online Store &rarr; Themes</strong>
+            <p>In Shopify Admin, navigate to <strong>Online Store &rarr; Themes</strong> and click <strong>Customize</strong> on your active theme.</p>
           </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>Open App embeds</strong>
+            <p>In the Theme Editor, click the puzzle-piece icon in the left sidebar to open <strong>App embeds</strong>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>Enable Easy Upsell Modal</strong>
+            <p>Find <strong>Easy Upsell Modal</strong> in the list and toggle it <strong>ON</strong>. Optionally configure:</p>
+            <ul>
+              <li><strong>App URL</strong> — your deployed app URL (set automatically in most cases)</li>
+              <li><strong>Modal delay</strong> — milliseconds before the modal appears (0–2000ms)</li>
+              <li><strong>Button colors</strong> — customize the accept button to match your brand</li>
+            </ul>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <strong>Save</strong>
+            <p>Click <strong>Save</strong> in the top-right corner of the Theme Editor. The extension is now live.</p>
+          </div>
+        </div>
+
+        <div class="alert">
+          <strong>Important — App URL setting</strong>
+          After enabling the extension, verify that the <strong>App URL</strong> in the extension settings matches your current app URL. If it's outdated, the modal won't be able to check for offers. Click <strong>Set app URL</strong> if it needs updating.
         </div>
 
         <hr class="divider" />
 
-        <div class="contact-box">
-          <h2>Contact Support</h2>
-          <p>Send us an email and we'll get back to you within <strong>48 business hours</strong>.</p>
-          <p>
-            <a href="mailto:ismaeljarias@gmail.com">ismaeljarias@gmail.com</a>
-          </p>
-          <p>To help us resolve your issue faster, please include:</p>
-          <ul>
-            <li>Your Shopify store URL (e.g., yourstore.myshopify.com)</li>
-            <li>A short description of the issue or question</li>
-            <li>Screenshots if applicable</li>
-          </ul>
+        <!-- SETUP -->
+        <h2 id="setup">Setup &amp; Configuration</h2>
+        <p>Once installed, create upsell offers from the Easy Upsell dashboard inside Shopify Admin.</p>
+
+        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Creating an offer</h3>
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>Click "Create offer"</strong>
+            <p>From the Easy Upsell dashboard, click the <strong>Create offer</strong> button.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>Select a trigger product</strong>
+            <p>Search for the product that, when added to cart, will trigger the upsell modal. Only one active offer per trigger product is allowed.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>Select the upsell product</strong>
+            <p>Search for the product you want to offer as an upsell. This is the product the customer will see in the modal.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <strong>Set an optional discount</strong>
+            <p>Enter a discount percentage (e.g., <code>20</code> for 20% off). Leave empty for no discount. The discount is applied automatically at checkout via Shopify's native discount system — no coupon codes needed.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <strong>Save and activate</strong>
+            <p>Click <strong>Save</strong>. The offer is active immediately. Test it by adding the trigger product to your cart on the storefront.</p>
+          </div>
         </div>
 
-        <hr class="divider" />
-
-        <h2>Before you reach out</h2>
-        <p>Here are a few quick checks that resolve most common issues:</p>
+        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Managing offers</h3>
         <ul>
-          <li><strong>App permissions:</strong> Make sure Easy Upsell has been granted the necessary permissions during installation. Re-installing the app will re-trigger the permission flow.</li>
-          <li><strong>Active offers:</strong> Ensure at least one upsell offer is active and correctly configured in the app dashboard.</li>
-          <li><strong>Theme compatibility:</strong> Easy Upsell works with most Shopify themes. If you're using a heavily customized theme, reach out and we'll help verify compatibility.</li>
-          <li><strong>Browser cache:</strong> If changes aren't reflecting in your storefront, try a hard refresh (Ctrl+Shift+R or Cmd+Shift+R) or test in a private/incognito window.</li>
+          <li><strong>Active / Inactive:</strong> Toggle any offer on or off from the offers list without deleting it.</li>
+          <li><strong>One offer per trigger:</strong> Each trigger product can only have one active offer at a time. Deactivate the existing one before creating another for the same trigger.</li>
+          <li><strong>Editing an offer:</strong> Click any offer in the list to edit the upsell product, discount, or status.</li>
+          <li><strong>Deleting an offer:</strong> Deleting an offer is permanent. If no other active offers use discounts, the automatic discount is also removed from Shopify automatically.</li>
         </ul>
 
         <hr class="divider" />
 
-        <h2>Response times</h2>
-        <p>We respond to all support requests within <strong>48 business hours</strong> (Monday–Friday, excluding public holidays). For urgent issues affecting your live store, please note "URGENT" in your email subject line and we will prioritize your request.</p>
+        <!-- HOW IT WORKS -->
+        <h2 id="how-it-works">How It Works</h2>
+        <p>Understanding the flow helps you configure offers correctly and troubleshoot issues faster.</p>
+
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>Customer adds a trigger product to cart</strong>
+            <p>The theme extension detects the cart add event on your storefront.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>Extension checks for an active offer</strong>
+            <p>A fast API call is made to Easy Upsell to check if an active offer exists for that product. Results are cached for 5 seconds to keep your storefront fast.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>Modal appears</strong>
+            <p>If an offer is found, the upsell modal slides in showing the recommended product with its price — and the discounted price if a discount was set.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <strong>Customer accepts or declines</strong>
+            <p>If the customer accepts, the upsell product is added to their cart silently. The cart badge updates in real time. If they decline, the modal closes — the original product is already in the cart.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <strong>Discount applies at checkout</strong>
+            <p>If a discount was set, Shopify's checkout automatically applies it to the upsell line item. No coupon code is required. The customer sees the discounted price in their order summary.</p>
+          </div>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- TROUBLESHOOTING -->
+        <h2 id="troubleshooting">Troubleshooting</h2>
+
+        <div class="issue">
+          <div class="issue-header">Modal is not appearing on my storefront</div>
+          <div class="issue-body">
+            <p>Check these in order:</p>
+            <ul>
+              <li>The theme extension is <strong>enabled</strong> in Online Store &rarr; Themes &rarr; Customize &rarr; App embeds.</li>
+              <li>You clicked <strong>Save</strong> in the Theme Editor after enabling it.</li>
+              <li>At least one offer is <strong>active</strong> in the Easy Upsell dashboard.</li>
+              <li>You're adding the correct <strong>trigger product</strong> to cart (not the upsell product).</li>
+              <li>The <strong>App URL</strong> in the extension settings is set correctly. An outdated URL prevents the extension from reaching the API.</li>
+              <li>Open your browser's <strong>DevTools &rarr; Console</strong> tab while adding to cart and look for errors from Easy Upsell.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="issue">
+          <div class="issue-header">Discount is not being applied at checkout</div>
+          <div class="issue-body">
+            <p>The discount is applied by a Shopify Function at checkout. If it's not working:</p>
+            <ul>
+              <li>Make sure the offer was saved with a discount percentage greater than 0.</li>
+              <li>The upsell item must have been added via the modal — manually added items won't have the discount.</li>
+              <li>Check that you accepted the upsell in the modal (not declined). Only accepted upsells get the discount tag.</li>
+              <li>If the discount was recently removed from Shopify Admin manually, Easy Upsell will automatically recreate it the next time the Offers page is loaded.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="issue">
+          <div class="issue-header">Cart badge is not updating after accepting an upsell</div>
+          <div class="issue-body">
+            <p>Easy Upsell automatically updates the cart icon badge after an upsell is accepted. If it's not updating:</p>
+            <ul>
+              <li>Your theme may use a custom badge selector. Easy Upsell supports Dawn, Prestige, Turbo, and most standard themes out of the box.</li>
+              <li>Open <strong>DevTools &rarr; Elements</strong> and search for your theme's cart count element to verify it exists.</li>
+              <li>Try a hard refresh (<code>Cmd+Shift+R</code> / <code>Ctrl+Shift+R</code>) and test again.</li>
+              <li>If you're on a heavily customized theme, contact us with your store URL and we'll help add compatibility.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="issue">
+          <div class="issue-header">I get an error "Only one active offer per trigger product is allowed"</div>
+          <div class="issue-body">
+            <p>Each trigger product can only have one active offer at a time. To create a new offer for the same trigger product, first go to the existing offer and set it to <strong>Inactive</strong>, then create the new one.</p>
+          </div>
+        </div>
+
+        <div class="issue">
+          <div class="issue-header">The upsell product is not being added to the cart</div>
+          <div class="issue-body">
+            <ul>
+              <li>Check that the upsell product is <strong>in stock</strong> and published in your store.</li>
+              <li>Open <strong>DevTools &rarr; Network</strong> tab and look for a failed <code>/cart/add.js</code> request after clicking accept.</li>
+              <li>Verify the product has at least one available variant.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="issue">
+          <div class="issue-header">App was uninstalled — what data was removed?</div>
+          <div class="issue-body">
+            <p>When Easy Upsell is uninstalled, all your offers and the associated automatic discount are automatically removed from Shopify. Your store returns to its state before installation. Store data is fully deleted from our servers within 30 days.</p>
+          </div>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- BILLING -->
+        <h2 id="billing">Billing</h2>
+
+        <h3 style="font-size:1rem; margin: 0 0 12px; font-weight:700;">How billing works</h3>
+        <p>Easy Upsell is billed through Shopify's standard billing system. All charges appear on your Shopify invoice — there are no external payment methods or separate subscriptions to manage.</p>
+
+        <h3 style="font-size:1rem; margin: 24px 0 12px; font-weight:700;">Common billing questions</h3>
+        <ul>
+          <li><strong>Where do I see my charges?</strong> — In Shopify Admin, go to <strong>Settings &rarr; Billing</strong>. Easy Upsell charges appear under "App charges".</li>
+          <li><strong>How do I cancel?</strong> — Uninstall Easy Upsell from <strong>Settings &rarr; Apps</strong> in Shopify Admin. Billing stops immediately upon uninstall.</li>
+          <li><strong>Will I be charged after uninstalling?</strong> — No. Shopify prorates charges to the day of uninstall. You will not be billed for the remainder of any billing period after uninstalling.</li>
+          <li><strong>Can I get a refund?</strong> — Refund requests are handled on a case-by-case basis. Contact us with your store URL and the reason for the request.</li>
+        </ul>
+
+        <p>For any billing issue not listed here, contact us at <a href="mailto:ismaeljarias@gmail.com">ismaeljarias@gmail.com</a> with your store URL and we'll help resolve it.</p>
+
+        <hr class="divider" />
+
+        <!-- CONTACT -->
+        <div class="contact-box" id="contact">
+          <h2>Contact Support</h2>
+          <p>Send us an email and we'll get back to you within <strong>48 business hours</strong> (Monday–Friday).</p>
+          <p><a href="mailto:ismaeljarias@gmail.com">ismaeljarias@gmail.com</a></p>
+          <p>To help us resolve your issue faster, please include:</p>
+          <ul>
+            <li>Your Shopify store URL (e.g., <code>yourstore.myshopify.com</code>)</li>
+            <li>A short description of the issue</li>
+            <li>Screenshots or screen recordings if applicable</li>
+            <li>Browser and device (e.g., Chrome on Mac, Safari on iPhone)</li>
+          </ul>
+          <p style="margin-top:14px; font-size:0.88rem; color: var(--color-muted);">For urgent issues affecting your live store, write <strong>URGENT</strong> in the subject line.</p>
+        </div>
 
       </div>
     </div>
