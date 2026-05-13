@@ -68,7 +68,7 @@
             <li><a href="#installation">Installation</a></li>
             <li><a href="#creating-offers">Creating Offers</a></li>
             <li><a href="#display-locations">Where Upsells Appear</a></li>
-            <li><a href="#theme-blocks">Optional: Manual Block Placement</a></li>
+            <li><a href="#theme-blocks">Theme Editor Blocks</a></li>
             <li><a href="#customizing">Customizing Appearance</a></li>
             <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#language">Language Support</a></li>
@@ -106,7 +106,7 @@
         </div>
 
         <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Step 2 — Enable the theme extension</h3>
-        <p>The upsell surfaces are delivered via a Shopify theme extension. Enable it once and all three surfaces (modal, cart widget, product widget) become active automatically.</p>
+        <p>The upsell surfaces are delivered via a Shopify theme extension. Enable it once and the <strong>modal</strong> goes live automatically. The <strong>cart widget</strong> and <strong>product widget</strong> require adding Theme Editor blocks — see <a href="#theme-blocks">Theme Editor Blocks</a> below.</p>
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-body">
@@ -215,7 +215,7 @@
 
         <!-- DISPLAY LOCATIONS -->
         <h2 id="display-locations">Where Upsells Appear</h2>
-        <p>Easy Upsell shows offers in up to three places on your storefront. All three activate automatically once the theme extension is enabled — no extra setup required.</p>
+        <p>Easy Upsell shows offers in up to three places on your storefront. The <strong>modal</strong> activates automatically once the theme extension is enabled. The <strong>cart widget</strong> and <strong>product widget</strong> require placing a block in the Theme Editor — this gives you full control over where they appear.</p>
 
         <div class="surface-grid">
           <div class="surface-card">
@@ -224,73 +224,70 @@
           </div>
           <div class="surface-card">
             <h4>Cart page widget</h4>
-            <p>Appears inline on the cart page (<code>/cart</code>) as a stacked list of relevant offers based on what's already in the cart.</p>
+            <p>Inline suggestions on the cart page (<code>/cart</code>) based on what's in the cart. Requires placing the <strong>Easy Upsell – Cart</strong> block in the Theme Editor.</p>
           </div>
           <div class="surface-card">
             <h4>Product page widget</h4>
-            <p>"Pairs well with" suggestion shown below the add-to-cart button on the product page for the trigger product.</p>
+            <p>"Pairs well with" suggestion shown on the trigger product's page. Requires placing the <strong>Easy Upsell – Product</strong> block in the Theme Editor.</p>
           </div>
         </div>
 
         <h3 style="font-size:1rem; margin: 24px 0 8px; font-weight:700;">Already in cart</h3>
         <p>All three surfaces check whether the upsell product is already in the cart. If it is, the button shows <strong>"Already added"</strong> (disabled) instead of the normal add button — so customers are never prompted to add something twice. On the cart page, this updates in real time as items are added or removed without a page reload.</p>
-        <p>The cart widget also hides itself automatically if all items are removed from the cart, since there is no longer a trigger product to base the suggestion on.</p>
+        <p>On the cart page, offer button states update in real time as items are added or removed without a page reload.</p>
 
         <hr class="divider" />
 
         <!-- THEME BLOCKS -->
-        <h2 id="theme-blocks">Optional: Manual Block Placement</h2>
-        <p>By default, the cart widget and product page widget appear in fixed positions chosen automatically. If you want to control exactly where they appear on the page, you can place them manually via the Theme Editor.</p>
+        <h2 id="theme-blocks">Theme Editor Blocks</h2>
+        <p>Both the cart widget and the product widget are placed via the Theme Editor. <strong>Neither widget appears automatically</strong> — you must add each block once to activate it. This gives you full control over where each widget appears on the page.</p>
 
-        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Cart page widget</h3>
+        <h3 style="font-size:1rem; margin: 28px 0 14px; font-weight:700;">Cart page widget <span style="font-size:0.78rem; background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:700; margin-left:6px;">Required</span></h3>
+        <p style="font-size:0.9rem; color:#374151; margin-bottom:16px;">The cart widget only appears when this block is added. Complete these steps once — you do not need to repeat them per offer.</p>
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-body">
             <strong>Open the Theme Editor on the Cart page</strong>
-            <p>In the Theme Editor, switch the page template to <strong>Cart</strong> using the top page selector.</p>
+            <p>In Shopify Admin go to <strong>Online Store → Themes → Customize</strong>. Use the top page selector to switch the preview to the <strong>Cart</strong> page template.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-body">
             <strong>Add the block</strong>
-            <p>In the left sidebar, click <strong>Add block</strong> in the cart section and choose <strong>Easy Upsell – Cart</strong>.</p>
+            <p>In the left sidebar, find the cart section and click <strong>Add block</strong>. Choose <strong>Easy Upsell – Cart</strong> from the list.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-body">
             <strong>Drag to position and save</strong>
-            <p>Drag the block to the position you want and click <strong>Save</strong>. Easy Upsell will use your placement and skip the automatic injection.</p>
+            <p>Drag the block to the position you want, then click <strong>Save</strong> in the top-right corner. The cart widget is now live.</p>
           </div>
         </div>
 
-        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Product page widget</h3>
+        <h3 style="font-size:1rem; margin: 28px 0 14px; font-weight:700;">Product page widget <span style="font-size:0.78rem; background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:700; margin-left:6px;">Required</span></h3>
+        <p style="font-size:0.9rem; color:#374151; margin-bottom:16px;">The product widget only appears when this block is added. Complete these steps once — it will then appear on every product page that has an active offer.</p>
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-body">
             <strong>Open the Theme Editor on a Product page</strong>
-            <p>Switch the page template to <strong>Product</strong>.</p>
+            <p>In Shopify Admin go to <strong>Online Store → Themes → Customize</strong>. Use the top page selector to switch the preview to a <strong>Product</strong> page template.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-body">
             <strong>Add the block</strong>
-            <p>Find the product section (e.g., <strong>Product information</strong>) in the sidebar, click <strong>Add block</strong>, and choose <strong>Easy Upsell – Product</strong>.</p>
+            <p>Find the product section (e.g., <strong>Product information</strong>) in the left sidebar, click <strong>Add block</strong>, and choose <strong>Easy Upsell – Product</strong>.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-body">
             <strong>Drag to position and save</strong>
-            <p>Place it below the add-to-cart button or anywhere in the product section, then click <strong>Save</strong>.</p>
+            <p>Place the block below the add-to-cart button or anywhere within the product section, then click <strong>Save</strong> in the top-right corner. The product widget is now live.</p>
           </div>
-        </div>
-
-        <div class="tip">
-          <strong>Auto-inject skips automatically</strong>
-          If you place a block manually, Easy Upsell detects it and skips the automatic injection — no duplicate widgets will appear.
         </div>
 
         <hr class="divider" />
@@ -331,7 +328,7 @@
           <li><strong>Background, text, border, and button colors</strong></li>
         </ul>
 
-        <p style="font-size:0.9rem; color: var(--color-muted);">Widget settings are only available when the block is placed manually via the Theme Editor. The auto-injected versions use sensible defaults that match most Shopify themes.</p>
+        <p style="font-size:0.9rem; color: var(--color-muted);">Widget settings (colors, labels, etc.) are configured in the Theme Editor when the block is placed. Both the cart widget and product widget must be added as Theme Editor blocks — neither auto-injects.</p>
 
         <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Live modal preview</h3>
         <p>Inside the Theme Editor, a <strong>Preview Modal</strong> button appears fixed in the top-right corner of the storefront preview. Click it to open or close the modal with a sample product — no need to add anything to cart. This lets you see styling changes in real time. The preview button is only visible inside the Theme Editor and never appears to customers.</p>
@@ -379,7 +376,7 @@
         </div>
 
         <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Cart &amp; product widget flow</h3>
-        <p>When a customer visits the cart page or a product page, the widgets load the current cart contents and fetch relevant offers in parallel. Matching offers appear as card-style suggestions with product image, price, discount badge, and an add button. If the upsell product is already in the cart, the button shows "Already added" and is disabled — no duplicate adds possible.</p>
+        <p>When a customer visits the cart page or a product page, the widgets (placed via the Theme Editor) load the current cart contents and fetch relevant offers. Matching offers appear as card-style suggestions with product image, price, discount badge, and an add button. If the upsell product is already in the cart, the button shows "Already added" and is disabled — no duplicate adds possible.</p>
 
         <hr class="divider" />
 
@@ -418,9 +415,10 @@
           <div class="issue-header">Cart widget or product widget is not appearing</div>
           <div class="issue-body">
             <ul>
-              <li>Confirm the theme extension is enabled (the widgets auto-inject from the embed JS).</li>
-              <li>For the cart widget, make sure at least one offer has display location set to <strong>Cart</strong> or <strong>Both</strong>, and that the trigger product is in the cart.</li>
-              <li>For the product widget, visit the product page for the <strong>trigger product</strong> (not the upsell product).</li>
+              <li>Confirm the theme extension is enabled in <strong>Online Store → Themes → Customize → App embeds</strong>.</li>
+              <li>For the <strong>cart widget</strong>: the <strong>Easy Upsell – Cart</strong> block must be added to the Cart page in the Theme Editor — it does not appear automatically. See <a href="#theme-blocks">Theme Editor Blocks</a>.</li>
+              <li>For the <strong>product widget</strong>: the <strong>Easy Upsell – Product</strong> block must be added to the Product page in the Theme Editor. Visit the trigger product's page (not the upsell product).</li>
+              <li>Make sure at least one offer is active with a display location matching the widget you're testing (<strong>Cart</strong>, <strong>Both</strong>, etc.).</li>
               <li>Check the Network tab in DevTools for the <code>/api/upsell/cart</code> or <code>/api/upsell/check</code> request — verify it returns offers.</li>
               <li>If a minimum cart value is set on the offer, make sure the cart total meets it.</li>
             </ul>
