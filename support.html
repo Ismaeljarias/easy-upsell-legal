@@ -234,6 +234,7 @@
 
         <h3 style="font-size:1rem; margin: 24px 0 8px; font-weight:700;">Already in cart</h3>
         <p>All three surfaces check whether the upsell product is already in the cart. If it is, the button shows <strong>"Already added"</strong> (disabled) instead of the normal add button — so customers are never prompted to add something twice. On the cart page, this updates in real time as items are added or removed without a page reload.</p>
+        <p>The cart widget also hides itself automatically if all items are removed from the cart, since there is no longer a trigger product to base the suggestion on.</p>
 
         <hr class="divider" />
 
@@ -373,7 +374,7 @@
           <div class="step-num">5</div>
           <div class="step-body">
             <strong>Discount applies at checkout</strong>
-            <p>If a discount was set, Shopify applies it automatically to the upsell line item at checkout. No coupon code required.</p>
+            <p>If a discount was set, Shopify applies it automatically to the upsell line item at checkout. No coupon code required. The discount is only applied if the <strong>trigger product is still in the cart</strong> at checkout — if it was removed before completing the purchase, the upsell discount is automatically revoked.</p>
           </div>
         </div>
 
@@ -432,6 +433,7 @@
             <ul>
               <li>The discount is applied by a Shopify Function. Make sure the offer was saved with a discount value greater than 0.</li>
               <li>The upsell item must have been added via Easy Upsell — manually added items won't carry the discount.</li>
+              <li>The <strong>trigger product must still be in the cart</strong> at checkout. If the customer removed the trigger product after accepting the upsell, the discount is intentionally not applied.</li>
               <li>If the discount was deleted from Shopify Admin manually, Easy Upsell will recreate it automatically next time the Offers page loads.</li>
             </ul>
           </div>
