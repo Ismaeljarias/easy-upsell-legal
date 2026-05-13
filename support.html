@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Support — Easy Upsell</title>
-  <meta name="description" content="Get help with Easy Upsell — installation, setup, troubleshooting, and billing support for Shopify merchants." />
+  <meta name="description" content="Get help with Easy Upsell — installation, setup, display locations, customization, troubleshooting, and billing." />
   <link rel="stylesheet" href="styles.css" />
   <style>
     .toc { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 40px; }
@@ -21,6 +21,8 @@
     .step-body li { margin-bottom: 4px; }
     .alert { background: #fffbeb; border: 1.5px solid #fde68a; border-radius: var(--radius); padding: 14px 18px; font-size: 0.9rem; color: #92400e; margin: 16px 0; }
     .alert strong { display: block; margin-bottom: 4px; }
+    .tip { background: #f0fdf4; border: 1.5px solid #bbf7d0; border-radius: var(--radius); padding: 14px 18px; font-size: 0.9rem; color: #166534; margin: 16px 0; }
+    .tip strong { display: block; margin-bottom: 4px; }
     .issue { border: 1px solid var(--color-border); border-radius: var(--radius); margin-bottom: 16px; overflow: hidden; }
     .issue-header { background: var(--color-surface); padding: 14px 18px; font-weight: 700; font-size: 0.95rem; border-bottom: 1px solid var(--color-border); }
     .issue-body { padding: 16px 18px; }
@@ -28,6 +30,12 @@
     .issue-body ul { margin: 8px 0 0 18px; }
     .issue-body li { margin-bottom: 5px; }
     code { background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 4px; padding: 1px 6px; font-size: 0.85rem; font-family: "SFMono-Regular", Consolas, monospace; color: #1e293b; }
+    .surface-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 20px 0; }
+    .surface-card { border: 1px solid var(--color-border); border-radius: var(--radius); padding: 18px; background: var(--color-surface); }
+    .surface-card h4 { font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; }
+    .surface-card p { font-size: 0.85rem; color: #374151; margin: 0; }
+    .badge-pro { font-size: 0.75rem; background: #f3e8ff; color: #7c3aed; padding: 2px 8px; border-radius: 4px; font-weight: 700; margin-left: 6px; }
+    .badge-free { font-size: 0.75rem; background: #ecfdf5; color: #065f46; padding: 2px 8px; border-radius: 4px; font-weight: 700; margin-left: 6px; }
   </style>
 </head>
 <body>
@@ -47,7 +55,7 @@
     <header class="page-header">
       <div class="container">
         <h1>Support Center</h1>
-        <p class="meta">Everything you need to install, configure, and troubleshoot Easy Upsell.</p>
+        <p class="meta">Everything you need to install, configure, and get the most out of Easy Upsell.</p>
       </div>
     </header>
 
@@ -58,9 +66,12 @@
           <h3>On this page</h3>
           <ol>
             <li><a href="#installation">Installation</a></li>
-            <li><a href="#setup">Setup &amp; Configuration</a></li>
-            <li><a href="#customizing">Customizing the Modal</a></li>
+            <li><a href="#creating-offers">Creating Offers</a></li>
+            <li><a href="#display-locations">Where Upsells Appear</a></li>
+            <li><a href="#theme-blocks">Optional: Manual Block Placement</a></li>
+            <li><a href="#customizing">Customizing Appearance</a></li>
             <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#language">Language Support</a></li>
             <li><a href="#troubleshooting">Troubleshooting</a></li>
             <li><a href="#billing">Billing</a></li>
             <li><a href="#contact">Contact Support</a></li>
@@ -69,33 +80,33 @@
 
         <!-- INSTALLATION -->
         <h2 id="installation">Installation</h2>
-        <p>Easy Upsell has two parts: the <strong>admin app</strong> (where you manage offers) and the <strong>theme extension</strong> (what your customers see). Both need to be set up.</p>
+        <p>Easy Upsell has two parts: the <strong>admin app</strong> (where you manage offers) and the <strong>theme extension</strong> (what your customers see). Setup takes about two minutes.</p>
 
         <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Step 1 — Install the app</h3>
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-body">
             <strong>Install from the Shopify App Store</strong>
-            <p>Find Easy Upsell in the Shopify App Store and click <strong>Add app</strong>. You'll be redirected to Shopify's OAuth flow to grant the required permissions.</p>
+            <p>Find Easy Upsell in the Shopify App Store and click <strong>Add app</strong>. Shopify's OAuth flow will ask you to grant the required permissions.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-body">
             <strong>Approve permissions</strong>
-            <p>Easy Upsell requires access to your products and the ability to create automatic discounts at checkout. Review and click <strong>Install app</strong>.</p>
+            <p>Easy Upsell needs access to your products and the ability to create automatic discounts at checkout. Click <strong>Install app</strong> to confirm.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-body">
             <strong>You're in the dashboard</strong>
-            <p>After install, you'll land on the Easy Upsell dashboard inside Shopify Admin. You're ready to create your first offer.</p>
+            <p>After install you'll land on the Easy Upsell dashboard inside Shopify Admin. You're ready to create your first offer.</p>
           </div>
         </div>
 
         <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Step 2 — Enable the theme extension</h3>
-        <p>The upsell modal is delivered via a Shopify theme extension. You need to enable it once in your theme.</p>
+        <p>The upsell surfaces are delivered via a Shopify theme extension. Enable it once and all three surfaces (modal, cart widget, product widget) become active automatically.</p>
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-body">
@@ -107,187 +118,280 @@
           <div class="step-num">2</div>
           <div class="step-body">
             <strong>Open App embeds</strong>
-            <p>In the Theme Editor, click the puzzle-piece icon in the left sidebar to open <strong>App embeds</strong>.</p>
+            <p>Click the puzzle-piece icon in the left sidebar to open <strong>App embeds</strong>.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-body">
             <strong>Enable Easy Upsell Modal</strong>
-            <p>Find <strong>Easy Upsell Modal</strong> in the list and toggle it <strong>ON</strong>. Optionally configure:</p>
-            <ul>
-              <li><strong>App URL</strong> — your deployed app URL (set automatically in most cases)</li>
-              <li><strong>Modal delay</strong> — milliseconds before the modal appears (0–2000ms)</li>
-              <li><strong>Button colors</strong> — customize the accept button to match your brand</li>
-            </ul>
+            <p>Find <strong>Easy Upsell Modal</strong> and toggle it <strong>ON</strong>.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">4</div>
           <div class="step-body">
             <strong>Save</strong>
-            <p>Click <strong>Save</strong> in the top-right corner of the Theme Editor. The extension is now live.</p>
+            <p>Click <strong>Save</strong> in the top-right corner. The extension is now live — no further configuration required.</p>
           </div>
         </div>
 
-        <div class="alert">
-          <strong>Important — App URL setting</strong>
-          After enabling the extension, verify that the <strong>App URL</strong> in the extension settings matches your current app URL. If it's outdated, the modal won't be able to check for offers. Click <strong>Set app URL</strong> if it needs updating.
+        <div class="tip">
+          <strong>No URL configuration needed</strong>
+          The app URL is configured automatically during installation. You don't need to set anything manually — just enable the embed and save.
         </div>
 
         <hr class="divider" />
 
-        <!-- SETUP -->
-        <h2 id="setup">Setup &amp; Configuration</h2>
-        <p>Once installed, create upsell offers from the Easy Upsell dashboard inside Shopify Admin.</p>
+        <!-- CREATING OFFERS -->
+        <h2 id="creating-offers">Creating Offers</h2>
+        <p>From the Easy Upsell dashboard, click <strong>Create offer</strong> and fill in the following fields:</p>
 
-        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Creating an offer</h3>
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-body">
-            <strong>Click "Create offer"</strong>
-            <p>From the Easy Upsell dashboard, click the <strong>Create offer</strong> button.</p>
+            <strong>Trigger product</strong>
+            <p>The product that, when added to cart (modal) or already in the cart (cart &amp; product widgets), activates the upsell. Only one active offer per trigger product is allowed.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-body">
-            <strong>Select a trigger product</strong>
-            <p>Search for the product that, when added to cart, will trigger the upsell modal. Only one active offer per trigger product is allowed.</p>
+            <strong>Upsell product</strong>
+            <p>The product you want to recommend. This is what appears in the modal or widget.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-body">
-            <strong>Select the upsell product</strong>
-            <p>Search for the product you want to offer as an upsell. This is the product the customer will see in the modal.</p>
+            <strong>Discount (optional)</strong>
+            <p>Choose a discount type:</p>
+            <ul>
+              <li><strong>Percentage</strong> — e.g., 20% off the upsell product</li>
+              <li><strong>Fixed amount</strong> — e.g., $5 off the upsell product</li>
+              <li><strong>Free shipping</strong> — waive shipping on the order</li>
+              <li><strong>None</strong> — show at full price</li>
+            </ul>
+            <p style="margin-top:6px;">Discounts are applied automatically at checkout by Shopify — no coupon codes needed.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">4</div>
           <div class="step-body">
-            <strong>Set an optional discount</strong>
-            <p>Enter a discount percentage (e.g., <code>20</code> for 20% off). Leave empty for no discount. The discount is applied automatically at checkout via Shopify's native discount system — no coupon codes needed.</p>
+            <strong>Minimum cart value (optional)</strong>
+            <p>Only show the upsell when the cart total reaches a certain amount (in dollars). Leave blank to always show.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">5</div>
           <div class="step-body">
+            <strong>Display location</strong>
+            <p>Choose where the upsell appears:</p>
+            <ul>
+              <li><strong>Modal</strong> — popup after the trigger product is added to cart</li>
+              <li><strong>Cart page widget</strong> — inline suggestion on the cart page</li>
+              <li><strong>Both</strong> — modal on add-to-cart and also the cart page widget</li>
+            </ul>
+            <p style="margin-top:6px;">The product page widget always appears when any offer matches the current product, regardless of this setting.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <div class="step-body">
             <strong>Save and activate</strong>
-            <p>Click <strong>Save</strong>. The offer is active immediately. Test it by adding the trigger product to your cart on the storefront.</p>
+            <p>Click <strong>Save</strong>. The offer is active immediately. Test it on your storefront by adding the trigger product to your cart.</p>
           </div>
         </div>
 
         <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Managing offers</h3>
         <ul>
-          <li><strong>Active / Inactive:</strong> Toggle any offer on or off from the offers list without deleting it.</li>
-          <li><strong>One offer per trigger:</strong> Each trigger product can only have one active offer at a time. Deactivate the existing one before creating another for the same trigger.</li>
-          <li><strong>Editing an offer:</strong> Click any offer in the list to edit the upsell product, discount, or status.</li>
-          <li><strong>Deleting an offer:</strong> Deleting an offer is permanent. If no other active offers use discounts, the automatic discount is also removed from Shopify automatically.</li>
+          <li><strong>Toggle on/off:</strong> Pause any offer without deleting it from the offers list.</li>
+          <li><strong>One active offer per trigger:</strong> Each trigger product can only have one active offer at a time. Deactivate the existing one before creating another for the same trigger.</li>
+          <li><strong>Edit:</strong> Click any offer row to update the upsell product, discount, location, or status inline.</li>
+          <li><strong>Delete:</strong> Permanent. If no other active offers use discounts, the automatic discount is removed from Shopify automatically.</li>
         </ul>
 
         <hr class="divider" />
 
-        <!-- CUSTOMIZING THE MODAL -->
-        <h2 id="customizing">Customizing the Modal</h2>
-        <p>The upsell modal can be customized directly from the Shopify Theme Editor. Text, colors, and layout settings are available — <strong>these only take effect on the Pro plan</strong>. Free plan stores always show the default styling.</p>
+        <!-- DISPLAY LOCATIONS -->
+        <h2 id="display-locations">Where Upsells Appear</h2>
+        <p>Easy Upsell shows offers in up to three places on your storefront. All three activate automatically once the theme extension is enabled — no extra setup required.</p>
 
-        <div class="alert">
-          <strong>Pro plan required for customization</strong>
-          All style settings (text, colors, layout) are visible in the Theme Editor for all plans, but they are only applied to your storefront if you are on the Pro plan. Upgrade from the Easy Upsell dashboard to unlock them.
+        <div class="surface-grid">
+          <div class="surface-card">
+            <h4>Modal popup</h4>
+            <p>Slides in right after a customer adds the trigger product to cart. Supports variant selection and shows the discounted price alongside the original.</p>
+          </div>
+          <div class="surface-card">
+            <h4>Cart page widget</h4>
+            <p>Appears inline on the cart page (<code>/cart</code>) as a stacked list of relevant offers based on what's already in the cart.</p>
+          </div>
+          <div class="surface-card">
+            <h4>Product page widget</h4>
+            <p>"Pairs well with" suggestion shown below the add-to-cart button on the product page for the trigger product.</p>
+          </div>
         </div>
 
-        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">How to open the modal settings</h3>
+        <h3 style="font-size:1rem; margin: 24px 0 8px; font-weight:700;">Already in cart</h3>
+        <p>All three surfaces check whether the upsell product is already in the cart. If it is, the button shows <strong>"Already added"</strong> (disabled) instead of the normal add button — so customers are never prompted to add something twice. On the cart page, this updates in real time as items are added or removed without a page reload.</p>
+
+        <hr class="divider" />
+
+        <!-- THEME BLOCKS -->
+        <h2 id="theme-blocks">Optional: Manual Block Placement</h2>
+        <p>By default, the cart widget and product page widget appear in fixed positions chosen automatically. If you want to control exactly where they appear on the page, you can place them manually via the Theme Editor.</p>
+
+        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Cart page widget</h3>
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-body">
-            <strong>Go to Online Store &rarr; Themes &rarr; Customize</strong>
-            <p>Open the Theme Editor for your active theme.</p>
+            <strong>Open the Theme Editor on the Cart page</strong>
+            <p>In the Theme Editor, switch the page template to <strong>Cart</strong> using the top page selector.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-body">
-            <strong>Click the puzzle-piece icon — App embeds</strong>
-            <p>In the left sidebar, click the <strong>App embeds</strong> icon (puzzle piece).</p>
+            <strong>Add the block</strong>
+            <p>In the left sidebar, click <strong>Add block</strong> in the cart section and choose <strong>Easy Upsell – Cart</strong>.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-body">
-            <strong>Click on "Easy Upsell Modal"</strong>
-            <p>This opens all available settings in the sidebar.</p>
+            <strong>Drag to position and save</strong>
+            <p>Drag the block to the position you want and click <strong>Save</strong>. Easy Upsell will use your placement and skip the automatic injection.</p>
           </div>
         </div>
 
-        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">What you can customize <span style="font-size:0.8rem; background:#f3e8ff; color:#7c3aed; padding:2px 8px; border-radius:4px; font-weight:700; margin-left:6px;">Pro</span></h3>
-        <ul style="margin-bottom: 20px;">
-          <li><strong>Modal title</strong> — the heading shown at the top of the modal (default: "Complete your order")</li>
-          <li><strong>Accept button text</strong> — label on the add-to-cart button (default: "Add to cart")</li>
-          <li><strong>Decline button text</strong> — label on the dismiss button (default: "No thanks")</li>
-          <li><strong>Accept button color</strong> — background and text color of the accept button</li>
-          <li><strong>Decline button color</strong> — background and text color of the decline button</li>
-          <li><strong>Modal background color</strong> — background of the modal card</li>
-          <li><strong>Text color</strong> — color used for product name and description</li>
-          <li><strong>Discounted price color</strong> — color of the sale price</li>
-          <li><strong>Discount badge color</strong> — color of the "X% off" badge</li>
-          <li><strong>Variant selected color</strong> — highlight color for the selected variant button</li>
-          <li><strong>Overlay opacity</strong> — how dark the background overlay appears (20–90%)</li>
-          <li><strong>Corner radius</strong> — roundness of the modal card (0–24px)</li>
-          <li><strong>Max width (desktop)</strong> — maximum width of the modal on large screens (360–640px)</li>
-        </ul>
-
-        <p>Non-Pro settings (available on all plans):</p>
-        <ul style="margin-bottom: 20px;">
-          <li><strong>Modal delay</strong> — milliseconds before the modal appears after the cart add (0–2000ms)</li>
-          <li><strong>Enable / Disable</strong> — toggle the entire upsell modal on or off without uninstalling</li>
-        </ul>
-
-        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Preview button</h3>
-        <p>When you're inside the Theme Editor, a <strong>"Preview Modal"</strong> button appears fixed in the top-right corner of your storefront preview. Click it to instantly open or close the modal with a sample product — no need to add anything to cart. This lets you see your styling changes in real time as you adjust settings in the sidebar.</p>
-        <p style="font-size:0.9rem; color: var(--color-muted); margin-top: 8px;">The preview button is only visible inside the Theme Editor and never appears to your customers.</p>
-
-        <hr class="divider" />
-
-        <!-- HOW IT WORKS -->
-        <h2 id="how-it-works">How It Works</h2>
-        <p>Understanding the flow helps you configure offers correctly and troubleshoot issues faster.</p>
-
+        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Product page widget</h3>
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-body">
-            <strong>Customer adds a trigger product to cart</strong>
-            <p>The theme extension detects the cart add event on your storefront.</p>
+            <strong>Open the Theme Editor on a Product page</strong>
+            <p>Switch the page template to <strong>Product</strong>.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-body">
-            <strong>Extension checks for an active offer</strong>
-            <p>A fast API call is made to Easy Upsell to check if an active offer exists for that product. Results are cached for 5 seconds to keep your storefront fast.</p>
+            <strong>Add the block</strong>
+            <p>Find the product section (e.g., <strong>Product information</strong>) in the sidebar, click <strong>Add block</strong>, and choose <strong>Easy Upsell – Product</strong>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>Drag to position and save</strong>
+            <p>Place it below the add-to-cart button or anywhere in the product section, then click <strong>Save</strong>.</p>
+          </div>
+        </div>
+
+        <div class="tip">
+          <strong>Auto-inject skips automatically</strong>
+          If you place a block manually, Easy Upsell detects it and skips the automatic injection — no duplicate widgets will appear.
+        </div>
+
+        <hr class="divider" />
+
+        <!-- CUSTOMIZING -->
+        <h2 id="customizing">Customizing Appearance</h2>
+
+        <div class="alert">
+          <strong>Pro plan required for full customization</strong>
+          Color and text customization for the modal requires the Pro plan. Cart and product widget colors are available on all plans. Free plan modal always uses the default styling.
+        </div>
+
+        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Modal settings <span class="badge-pro">Pro</span></h3>
+        <p>Open <strong>Online Store &rarr; Themes &rarr; Customize &rarr; App embeds &rarr; Easy Upsell Modal</strong>:</p>
+        <ul style="margin-bottom: 20px;">
+          <li><strong>Enable / Disable</strong> — toggle all upsell surfaces on or off without uninstalling</li>
+          <li><strong>Modal delay</strong> — milliseconds before the modal appears (0–2000ms) <span class="badge-free">Free</span></li>
+          <li><strong>Modal title</strong> — heading shown at the top (default: "Complete your order")</li>
+          <li><strong>Accept button text</strong> — label on the add button (default: "Add to cart")</li>
+          <li><strong>Decline button text</strong> — label on the dismiss button (default: "No thanks")</li>
+          <li><strong>Button, overlay, badge, and text colors</strong></li>
+          <li><strong>Corner radius</strong> — roundness of the modal card (0–24px)</li>
+          <li><strong>Max width (desktop)</strong> — maximum modal width on large screens (360–640px). Mobile is always full-width.</li>
+        </ul>
+
+        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Cart widget settings <span class="badge-free">Free</span></h3>
+        <p>Open the Theme Editor on the <strong>Cart</strong> page and click the <strong>Easy Upsell – Cart</strong> block:</p>
+        <ul style="margin-bottom: 20px;">
+          <li><strong>Heading text</strong> (default: "You might also like")</li>
+          <li><strong>Button text, added text, already-in-cart text</strong></li>
+          <li><strong>Background, text, border, button, and badge colors</strong></li>
+        </ul>
+
+        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Product widget settings <span class="badge-free">Free</span></h3>
+        <p>Open the Theme Editor on a <strong>Product</strong> page and click the <strong>Easy Upsell – Product</strong> block:</p>
+        <ul style="margin-bottom: 20px;">
+          <li><strong>Button text, added text, already-in-cart text</strong></li>
+          <li><strong>Background, text, border, and button colors</strong></li>
+        </ul>
+
+        <p style="font-size:0.9rem; color: var(--color-muted);">Widget settings are only available when the block is placed manually via the Theme Editor. The auto-injected versions use sensible defaults that match most Shopify themes.</p>
+
+        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Live modal preview</h3>
+        <p>Inside the Theme Editor, a <strong>Preview Modal</strong> button appears fixed in the top-right corner of the storefront preview. Click it to open or close the modal with a sample product — no need to add anything to cart. This lets you see styling changes in real time. The preview button is only visible inside the Theme Editor and never appears to customers.</p>
+
+        <hr class="divider" />
+
+        <!-- HOW IT WORKS -->
+        <h2 id="how-it-works">How It Works</h2>
+
+        <h3 style="font-size:1rem; margin: 0 0 14px; font-weight:700;">Modal flow</h3>
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>Customer adds a trigger product to cart</strong>
+            <p>The theme extension detects the cart add event, whether via a standard form or an Ajax request.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>Offer is checked</strong>
+            <p>A fast API call checks for an active offer for that product. Results are cached for 5 seconds to keep your storefront fast.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-body">
             <strong>Modal appears</strong>
-            <p>If an offer is found, the upsell modal slides in showing the recommended product with its price — and the discounted price if a discount was set.</p>
+            <p>If an offer is found and the upsell product is not already in cart, the modal slides in showing the product image, name, and pricing.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">4</div>
           <div class="step-body">
             <strong>Customer accepts or declines</strong>
-            <p>If the customer accepts, the upsell product is added to their cart silently. The cart badge updates in real time. If they decline, the modal closes — the original product is already in the cart.</p>
+            <p>Accepting silently adds the upsell product to cart and updates the cart icon. Declining closes the modal — the original product is already in the cart either way.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">5</div>
           <div class="step-body">
             <strong>Discount applies at checkout</strong>
-            <p>If a discount was set, Shopify's checkout automatically applies it to the upsell line item. No coupon code is required. The customer sees the discounted price in their order summary.</p>
+            <p>If a discount was set, Shopify applies it automatically to the upsell line item at checkout. No coupon code required.</p>
           </div>
         </div>
+
+        <h3 style="font-size:1rem; margin: 24px 0 14px; font-weight:700;">Cart &amp; product widget flow</h3>
+        <p>When a customer visits the cart page or a product page, the widgets load the current cart contents and fetch relevant offers in parallel. Matching offers appear as card-style suggestions with product image, price, discount badge, and an add button. If the upsell product is already in the cart, the button shows "Already added" and is disabled — no duplicate adds possible.</p>
+
+        <hr class="divider" />
+
+        <!-- LANGUAGE -->
+        <h2 id="language">Language Support</h2>
+        <p>Easy Upsell automatically detects your store's active language and displays the upsell modal and widgets in the correct language.</p>
+        <p>Supported languages:</p>
+        <ul>
+          <li><strong>English</strong> (default)</li>
+          <li><strong>Spanish</strong> — automatically used when the store locale is set to any Spanish variant (es, es-ES, es-MX, etc.)</li>
+        </ul>
+        <p>No configuration needed. Language detection is fully automatic based on the Shopify store locale.</p>
+        <p>Custom text for the modal (title, button labels) can be set per-plan in the Theme Editor App embeds settings.</p>
 
         <hr class="divider" />
 
@@ -301,10 +405,23 @@
             <ul>
               <li>The theme extension is <strong>enabled</strong> in Online Store &rarr; Themes &rarr; Customize &rarr; App embeds.</li>
               <li>You clicked <strong>Save</strong> in the Theme Editor after enabling it.</li>
-              <li>At least one offer is <strong>active</strong> in the Easy Upsell dashboard.</li>
+              <li>At least one offer is <strong>active</strong> in the Easy Upsell dashboard with display location set to <strong>Modal</strong> or <strong>Both</strong>.</li>
               <li>You're adding the correct <strong>trigger product</strong> to cart (not the upsell product).</li>
-              <li>The <strong>App URL</strong> in the extension settings is set correctly. An outdated URL prevents the extension from reaching the API.</li>
-              <li>Open your browser's <strong>DevTools &rarr; Console</strong> tab while adding to cart and look for errors from Easy Upsell.</li>
+              <li>Open your browser's <strong>DevTools &rarr; Console</strong> while adding to cart and look for errors from Easy Upsell.</li>
+              <li>If the Settings page shows "Not connected", click <strong>Connect</strong> to re-link the app URL to your theme.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="issue">
+          <div class="issue-header">Cart widget or product widget is not appearing</div>
+          <div class="issue-body">
+            <ul>
+              <li>Confirm the theme extension is enabled (the widgets auto-inject from the embed JS).</li>
+              <li>For the cart widget, make sure at least one offer has display location set to <strong>Cart</strong> or <strong>Both</strong>, and that the trigger product is in the cart.</li>
+              <li>For the product widget, visit the product page for the <strong>trigger product</strong> (not the upsell product).</li>
+              <li>Check the Network tab in DevTools for the <code>/api/upsell/cart</code> or <code>/api/upsell/check</code> request — verify it returns offers.</li>
+              <li>If a minimum cart value is set on the offer, make sure the cart total meets it.</li>
             </ul>
           </div>
         </div>
@@ -312,12 +429,10 @@
         <div class="issue">
           <div class="issue-header">Discount is not being applied at checkout</div>
           <div class="issue-body">
-            <p>The discount is applied by a Shopify Function at checkout. If it's not working:</p>
             <ul>
-              <li>Make sure the offer was saved with a discount percentage greater than 0.</li>
-              <li>The upsell item must have been added via the modal — manually added items won't have the discount.</li>
-              <li>Check that you accepted the upsell in the modal (not declined). Only accepted upsells get the discount tag.</li>
-              <li>If the discount was recently removed from Shopify Admin manually, Easy Upsell will automatically recreate it the next time the Offers page is loaded.</li>
+              <li>The discount is applied by a Shopify Function. Make sure the offer was saved with a discount value greater than 0.</li>
+              <li>The upsell item must have been added via Easy Upsell — manually added items won't carry the discount.</li>
+              <li>If the discount was deleted from Shopify Admin manually, Easy Upsell will recreate it automatically next time the Offers page loads.</li>
             </ul>
           </div>
         </div>
@@ -325,20 +440,24 @@
         <div class="issue">
           <div class="issue-header">Cart badge is not updating after accepting an upsell</div>
           <div class="issue-body">
-            <p>Easy Upsell automatically updates the cart icon badge after an upsell is accepted. If it's not updating:</p>
             <ul>
-              <li>Your theme may use a custom badge selector. Easy Upsell supports Dawn, Prestige, Turbo, and most standard themes out of the box.</li>
-              <li>Open <strong>DevTools &rarr; Elements</strong> and search for your theme's cart count element to verify it exists.</li>
-              <li>Try a hard refresh (<code>Cmd+Shift+R</code> / <code>Ctrl+Shift+R</code>) and test again.</li>
-              <li>If you're on a heavily customized theme, contact us with your store URL and we'll help add compatibility.</li>
+              <li>Easy Upsell updates the cart icon automatically after an upsell is accepted. It supports Dawn, Prestige, Turbo, and most standard Shopify themes.</li>
+              <li>If it's not updating, open <strong>DevTools &rarr; Elements</strong> and locate your theme's cart count element. Contact us with your store URL if you're on a heavily customized theme — we'll add compatibility.</li>
             </ul>
           </div>
         </div>
 
         <div class="issue">
-          <div class="issue-header">I get an error "Only one active offer per trigger product is allowed"</div>
+          <div class="issue-header">"Already added" is showing when the product is not in the cart</div>
           <div class="issue-body">
-            <p>Each trigger product can only have one active offer at a time. To create a new offer for the same trigger product, first go to the existing offer and set it to <strong>Inactive</strong>, then create the new one.</p>
+            <p>The check uses the numeric product ID from <code>/cart.js</code>. Open the Network tab in DevTools, check the <code>/cart.js</code> response, and confirm <code>items[].product_id</code> values. If the state seems stuck, a hard refresh (<code>Cmd+Shift+R</code> / <code>Ctrl+Shift+R</code>) usually resolves it.</p>
+          </div>
+        </div>
+
+        <div class="issue">
+          <div class="issue-header">"Only one active offer per trigger product" error</div>
+          <div class="issue-body">
+            <p>Each trigger product can only have one active offer at a time. Go to the existing offer, set it to <strong>Inactive</strong>, then create the new one.</p>
           </div>
         </div>
 
@@ -347,7 +466,7 @@
           <div class="issue-body">
             <ul>
               <li>Check that the upsell product is <strong>in stock</strong> and published in your store.</li>
-              <li>Open <strong>DevTools &rarr; Network</strong> tab and look for a failed <code>/cart/add.js</code> request after clicking accept.</li>
+              <li>Open <strong>DevTools &rarr; Network</strong> and look for a failed <code>/cart/add.js</code> request after clicking accept.</li>
               <li>Verify the product has at least one available variant.</li>
             </ul>
           </div>
@@ -356,7 +475,7 @@
         <div class="issue">
           <div class="issue-header">App was uninstalled — what data was removed?</div>
           <div class="issue-body">
-            <p>When Easy Upsell is uninstalled, all your offers and the associated automatic discount are automatically removed from Shopify. Your store returns to its state before installation. Store data is fully deleted from our servers within 30 days.</p>
+            <p>When Easy Upsell is uninstalled, all your offers and the associated automatic discount are automatically removed from Shopify. Your store returns to its original state. Store data is fully deleted from our servers within 30 days.</p>
           </div>
         </div>
 
@@ -366,17 +485,17 @@
         <h2 id="billing">Billing</h2>
 
         <h3 style="font-size:1rem; margin: 0 0 12px; font-weight:700;">How billing works</h3>
-        <p>Easy Upsell is billed through Shopify's standard billing system. All charges appear on your Shopify invoice — there are no external payment methods or separate subscriptions to manage.</p>
+        <p>Easy Upsell is billed through Shopify's standard billing system. All charges appear on your Shopify invoice — there are no external payment methods or separate subscriptions.</p>
 
         <h3 style="font-size:1rem; margin: 24px 0 12px; font-weight:700;">Common billing questions</h3>
         <ul>
           <li><strong>Where do I see my charges?</strong> — In Shopify Admin, go to <strong>Settings &rarr; Billing</strong>. Easy Upsell charges appear under "App charges".</li>
-          <li><strong>How do I cancel?</strong> — Uninstall Easy Upsell from <strong>Settings &rarr; Apps</strong> in Shopify Admin. Billing stops immediately upon uninstall.</li>
-          <li><strong>Will I be charged after uninstalling?</strong> — No. Shopify prorates charges to the day of uninstall. You will not be billed for the remainder of any billing period after uninstalling.</li>
-          <li><strong>Can I get a refund?</strong> — Refund requests are handled on a case-by-case basis. Contact us with your store URL and the reason for the request.</li>
+          <li><strong>How do I cancel?</strong> — Uninstall Easy Upsell from <strong>Settings &rarr; Apps</strong>. Billing stops immediately upon uninstall.</li>
+          <li><strong>Will I be charged after uninstalling?</strong> — No. Shopify prorates charges to the day of uninstall.</li>
+          <li><strong>Can I get a refund?</strong> — Refund requests are handled case by case. Contact us with your store URL and the reason.</li>
         </ul>
 
-        <p>For any billing issue not listed here, contact us at <a href="mailto:ismaeljarias@gmail.com">ismaeljarias@gmail.com</a> with your store URL and we'll help resolve it.</p>
+        <p>For any billing issue not listed here, contact us at <a href="mailto:ismaeljarias@gmail.com">ismaeljarias@gmail.com</a> with your store URL.</p>
 
         <hr class="divider" />
 
