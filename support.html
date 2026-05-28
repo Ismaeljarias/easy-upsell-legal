@@ -72,6 +72,7 @@
             <li><a href="#customizing">Customizing Appearance</a></li>
             <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#language">Language Support</a></li>
+            <li><a href="#sync-url">Storefront URL Sync</a></li>
             <li><a href="#troubleshooting">Troubleshooting</a></li>
             <li><a href="#billing">Billing</a></li>
             <li><a href="#contact">Contact Support</a></li>
@@ -137,8 +138,8 @@
         </div>
 
         <div class="tip">
-          <strong>No URL configuration needed</strong>
-          The app URL is configured automatically during installation. You don't need to set anything manually — just enable the embed and save.
+          <strong>No URL configuration needed for most merchants</strong>
+          The app URL is configured automatically during installation. You don't need to set anything manually — just enable the embed and save. If your widgets ever stop responding, go to <strong>Settings &rarr; Sync URL</strong> to re-sync.
         </div>
 
         <hr class="divider" />
@@ -393,6 +394,30 @@
 
         <hr class="divider" />
 
+        <!-- SYNC URL -->
+        <h2 id="sync-url">Storefront URL Sync</h2>
+
+        <div class="alert" style="background:#fef2f2; border-color:#fecaca; color:#7f1d1d;">
+          <strong>Widgets not loading? This is the most common fix.</strong>
+          Easy Upsell's theme widgets (modal, cart, product page) need to know your app's URL to fetch offers. If that URL ever gets out of sync, the widgets silently stop working — no visible error on the storefront.
+        </div>
+
+        <p>Go to <strong>Easy Upsell &rarr; Settings</strong> and click <strong>Sync URL</strong>. That's it — the button updates the URL your storefront uses to communicate with the app.</p>
+
+        <h3 style="font-size:1rem; margin: 24px 0 12px; font-weight:700;">When should you use Sync URL?</h3>
+        <ul style="margin-bottom: 20px;">
+          <li><strong>Widgets were working and suddenly stopped</strong> — the stored URL may have become stale after a redeploy or plan change.</li>
+          <li><strong>You reinstalled the app</strong> — reinstalling goes through OAuth again and resets the metafield, but Sync URL forces an immediate update.</li>
+          <li><strong>You migrated your app to a new server or domain</strong> — any time the app's URL changes, re-sync so the widgets point to the right place.</li>
+          <li><strong>Settings page shows a URL that doesn't match your current app URL</strong> — the URL displayed in Settings is what's currently saved; if it's wrong, click Sync URL to overwrite it.</li>
+          <li><strong>After a fresh install and the modal never appeared</strong> — OAuth sets the URL automatically, but an explicit sync guarantees it.</li>
+        </ul>
+
+        <h3 style="font-size:1rem; margin: 24px 0 12px; font-weight:700;">Why does this happen?</h3>
+        <p>Easy Upsell stores the app's URL in a private Shopify metafield on your shop (<code>easy_upsell.app_url</code>). The theme extension reads this metafield at page load to know where to send requests. Normally this is set automatically during OAuth (installation). In rare cases — server migrations, reinstalls, or Shopify OAuth edge cases — the metafield can point to an old or incorrect URL, causing all three widgets to silently return no offers.</p>
+
+        <hr class="divider" />
+
         <!-- TROUBLESHOOTING -->
         <h2 id="troubleshooting">Troubleshooting</h2>
 
@@ -406,7 +431,7 @@
               <li>At least one offer is <strong>active</strong> in the Easy Upsell dashboard with display location set to <strong>Modal</strong> or <strong>Both</strong>.</li>
               <li>You're adding the correct <strong>trigger product</strong> to cart (not the upsell product).</li>
               <li>Open your browser's <strong>DevTools &rarr; Console</strong> while adding to cart and look for errors from Easy Upsell.</li>
-              <li>If the Settings page shows "Not connected", click <strong>Connect</strong> to re-link the app URL to your theme.</li>
+              <li>Go to <strong>Settings &rarr; Sync URL</strong> to re-link the app URL. This is often the fix when everything else looks correct. See <a href="#sync-url">Storefront URL Sync</a>.</li>
             </ul>
           </div>
         </div>
@@ -419,6 +444,7 @@
               <li>For the <strong>cart widget</strong>: the <strong>Easy Upsell – Cart</strong> block must be added to the Cart page in the Theme Editor — it does not appear automatically. See <a href="#theme-blocks">Theme Editor Blocks</a>.</li>
               <li>For the <strong>product widget</strong>: the <strong>Easy Upsell – Product</strong> block must be added to the Product page in the Theme Editor. Visit the trigger product's page (not the upsell product).</li>
               <li>Make sure at least one offer is active with a display location matching the widget you're testing (<strong>Cart</strong>, <strong>Both</strong>, etc.).</li>
+              <li>Go to <strong>Settings &rarr; Sync URL</strong> and click <strong>Sync URL</strong> — a stale app URL is the most common cause of silent widget failures. See <a href="#sync-url">Storefront URL Sync</a>.</li>
               <li>Check the Network tab in DevTools for the <code>/api/upsell/cart</code> or <code>/api/upsell/check</code> request — verify it returns offers.</li>
               <li>If a minimum cart value is set on the offer, make sure the cart total meets it.</li>
             </ul>
